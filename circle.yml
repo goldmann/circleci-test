@@ -1,9 +1,12 @@
 machine:
+  pre:
+    - id
   services:
     - docker
 
 dependencies:
   override:
+    - echo 'DOCKER_OPTS="-s btrfs -e native"' > /etc/default/docker
     - id
     - cat /etc/default/docker
     - ps ax
