@@ -4,6 +4,6 @@ machine:
 
 dependencies:
   override:
-    - ps aux
+    - ps ax
     - docker -v
     - docker info
