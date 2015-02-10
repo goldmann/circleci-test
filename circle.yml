@@ -1,0 +1,9 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - ps aux
+    - docker -v
+    - docker info
