@@ -7,7 +7,8 @@ machine:
 dependencies:
   override:
     - ls -hall /etc/default/docker
-    - echo 'DOCKER_OPTS="-s btrfs -e native"' >> /etc/default/docker
+      #    - echo 'DOCKER_OPTS="-s btrfs -e native"' >> /etc/default/docker
+    - docker run -u root -v /etc/default/docker:/etc/default/docker busybox ls -hall /etc/default/docker
     - id
     - cat /etc/default/docker
     - ps ax
