@@ -4,6 +4,7 @@ machine:
 
 dependencies:
   override:
+    - id
     - cat /etc/default/docker
     - ps ax
     - docker -v
